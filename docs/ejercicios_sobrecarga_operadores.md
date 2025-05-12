@@ -22,35 +22,35 @@ Este documento propone ejercicios para practicar la sobrecarga de operadores en 
 
 2. **Completación de código**  
    ```cpp
-// complejo_suma.cpp
-#include <iostream>
-using namespace std;
+   // complejo_suma.cpp
+   #include <iostream>
+   using namespace std;
 
-class Complejo {
-public:
+   class Complejo {
+   public:
     double re, im;
     Complejo(double r, double i) : re(r), im(i) {}
     Complejo operator+(const Complejo& otro) {
         // TODO: devolver la suma de *this y otro
     }
-};
+   };
 
-int main() {
+   int main() {
     Complejo x(0.5, 0.5), y(1.5, 2.0);
     Complejo z = x + y;
     cout << "(" << z.re << ", " << z.im << ")" << endl;
     return 0;
-}
+   }
    ```
 
 3. **Detección y corrección de errores**  
    ```cpp
-// complejo_bug.cpp
-#include <iostream>
-using namespace std;
+   // complejo_bug.cpp
+   #include <iostream>
+   using namespace std;
 
-class Complejo {
-public:
+   class Complejo {
+   public:
     double re, im;
     Complejo(double r, double i) : re(r), im(i) {}
     // BUG: firma incorrecta y falta const
