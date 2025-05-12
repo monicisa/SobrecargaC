@@ -8,11 +8,11 @@ Este recurso de aprendizaje ofrece una guía completa para comprender y aplicar 
 
 ### 🟢 Nivel Básico
 
-#### 1. Sobrecarga del operador `+`
-- **Definición**: Permite redefinir la operación suma para clases personalizadas.
+#### 1. Sobrecarga de Operadores Binarios
+- **Definición**: Permite redefinir operadores como +, -, *, etc., para que funcionen con objetos de una clase definida por el usuario.
 - **Sintaxis**:
 ```cpp
-Clase operator+(const Clase& otro);
+Tipo operator+(const Clase& otro);
 ```
 - **Casos de uso**: Sumar objetos como puntos, vectores o unidades.
 - **Errores comunes**:
