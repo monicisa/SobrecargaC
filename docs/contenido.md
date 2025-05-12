@@ -20,8 +20,8 @@ Tipo operator+(const Clase& otro);
   - No declarar correctamente los parámetros como `const`.
 - **Ejemplo**: [ejemplo1.cpp](../ejemplos/ejemplo1.cpp)
 
-#### 2. Sobrecarga del operador `==`
-- **Definición**: Compara si dos objetos tienen el mismo estado.
+#### 2. Sobrecarga de Operadores de Comparación
+- **Definición**: Permite comparar objetos personalizados mediante operadores como ==, !=, <, >.
 - **Sintaxis**:
 ```cpp
 bool operator==(const Clase& otro);
@@ -29,59 +29,63 @@ bool operator==(const Clase& otro);
 - **Casos de uso**: Comparar clases como libros, usuarios, etc.
 - **Errores comunes**:
   - Comparar punteros en lugar de contenido.
+  - No usar const.
 - **Ejemplo**: [ejemplo2.cpp](../ejemplos/ejemplo2.cpp)
 
-#### 3. Sobrecarga de `<<` (salida)
-- **Definición**: Permite imprimir objetos con `cout` de forma personalizada.
+#### 3. Sobrecarga del Operador de Entrada/Salida
+- **Definición**: Permite mostrar o leer objetos directamente con cout y cin.
 - **Sintaxis**:
 ```cpp
 friend ostream& operator<<(ostream& os, const Clase& obj);
 ```
-- **Casos de uso**: Mostrar objetos de forma legible.
+- **Casos de uso**: Imprimir objetos de manera personalizada.
 - **Errores comunes**:
-  - Olvidar usar `friend`.
+  - No usar friend.
+  - No retornar ostream&.
 - **Ejemplo**: [ejemplo3.cpp](../ejemplos/ejemplo3.cpp)
 
 ---
 
 ### 🟡 Nivel Intermedio
 
-#### 4. Sobrecarga del operador `++` (postfijo)
-- **Definición**: Define cómo incrementar un objeto de manera personalizada.
+#### 4. Sobrecarga de Operadores Unarios
+- **Definición**: Redefine operadores como ++, --, !, - para que trabajen sobre un solo objeto.
 - **Sintaxis**:
 ```cpp
 Clase operator++(int);
 ```
-- **Casos de uso**: Contadores, iteradores.
+- **Casos de uso**: Contadores personalizados, iteradores, etc.
 - **Errores comunes**:
-  - Confundir pre y post incremento.
+  - No distinguir entre pre y post incremento.
+  - No devolver correctamente la copia.
 - **Ejemplo**: [ejemplo4.cpp](../ejemplos/ejemplo4.cpp)
 
-#### 5. Sobrecarga del operador de asignación `=`
-- **Definición**: Controla cómo se copian los objetos, especialmente cuando se usan recursos dinámicos.
+#### 5. Sobrecarga del Operador de Asignación
+- **Definición**: Permite copiar el contenido de un objeto a otro, especialmente cuando hay memoria dinámica.
 - **Sintaxis**:
 ```cpp
 Clase& operator=(const Clase& otra);
 ```
-- **Casos de uso**: Clases con punteros o recursos que deben duplicarse.
+- **Casos de uso**: Copia profunda para evitar que múltiples objetos apunten a la misma memoria.
 - **Errores comunes**:
-  - No liberar memoria previa.
-  - No manejar autoasignación.
+  - No verificar autoasignación.
+  - No liberar recursos previos.
 - **Ejemplo**: [ejemplo5.cpp](../ejemplos/ejemplo5.cpp)
 
 ---
 
 ### 🔴 Nivel Avanzado
 
-#### 6. Conversión de tipo a primitivo
-- **Definición**: Permite convertir un objeto a un tipo básico.
+#### 6. Operadores de Conversión de Tipo
+- **Definición**: Permite convertir objetos en otros tipos, como de clase a int o double.
 - **Sintaxis**:
 ```cpp
 operator tipo() const;
 ```
-- **Casos de uso**: Convertir clases como temperatura, moneda o peso.
+- **Casos de uso**:Simplificar comparaciones y operaciones con tipos primitivos.
 - **Errores comunes**:
   - Hacer conversiones implícitas peligrosas.
+  - No marcar como explicit si se requiere control.
 - **Ejemplo**: [ejemplo6.cpp](../ejemplos/ejemplo6.cpp)
 
 ---
