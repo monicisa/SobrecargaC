@@ -18,7 +18,7 @@ Tipo operator+(const Clase& otro);
 - **Errores comunes**:
   - No devolver un nuevo objeto.
   - No declarar correctamente los parámetros como `const`.
-- **Ejemplo**: [ejemplo1.cpp]([ejemplos/ejemplo1.cpp](https://github.com/ProfCDuqueTec/SobrecargaC/blob/b04a4da895300e4d288f7f72a08e11d47125af22/ejemplos/ejemplo1.cpp))
+- **Ejemplo**: [ejemplo1.cpp](../ejemplos/ejemplo1.cpp)
 
 #### 2. Sobrecarga del operador `==`
 - **Definición**: Compara si dos objetos tienen el mismo estado.
