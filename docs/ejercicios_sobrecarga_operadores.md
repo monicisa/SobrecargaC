@@ -57,13 +57,10 @@ Este documento propone ejercicios para practicar la sobrecarga de operadores en 
     Complejo operator+(Complejo otro) {
         return Complejo(re + otro.im, im + otro.re);
     }
-};
+   };
    ```
    - Pista: revisa los componentes que se suman y la firma del método.
 
-
-
----
 
 ### Concepto 2: Operador de comparación `==`
 
