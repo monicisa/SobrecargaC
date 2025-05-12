@@ -29,7 +29,7 @@ bool operator==(const Clase& otro);
 - **Casos de uso**: Comparar clases como libros, usuarios, etc.
 - **Errores comunes**:
   - Comparar punteros en lugar de contenido.
-- **Ejemplo**: `ejemplo2.cpp`
+- **Ejemplo**: [ejemplo2.cpp](../ejemplos/ejemplo2.cpp)
 
 #### 3. Sobrecarga de `<<` (salida)
 - **Definición**: Permite imprimir objetos con `cout` de forma personalizada.
@@ -40,7 +40,7 @@ friend ostream& operator<<(ostream& os, const Clase& obj);
 - **Casos de uso**: Mostrar objetos de forma legible.
 - **Errores comunes**:
   - Olvidar usar `friend`.
-- **Ejemplo**: `ejemplo3.cpp`
+- **Ejemplo**: [ejemplo3.cpp](../ejemplos/ejemplo3.cpp)
 
 ---
 
@@ -55,7 +55,7 @@ Clase operator++(int);
 - **Casos de uso**: Contadores, iteradores.
 - **Errores comunes**:
   - Confundir pre y post incremento.
-- **Ejemplo**: `ejemplo4.cpp`
+- **Ejemplo**: [ejemplo4.cpp](../ejemplos/ejemplo4.cpp)
 
 #### 5. Sobrecarga del operador de asignación `=`
 - **Definición**: Controla cómo se copian los objetos, especialmente cuando se usan recursos dinámicos.
@@ -67,7 +67,7 @@ Clase& operator=(const Clase& otra);
 - **Errores comunes**:
   - No liberar memoria previa.
   - No manejar autoasignación.
-- **Ejemplo**: `ejemplo5.cpp`
+- **Ejemplo**: [ejemplo5.cpp](../ejemplos/ejemplo5.cpp)
 
 ---
 
@@ -82,7 +82,7 @@ operator tipo() const;
 - **Casos de uso**: Convertir clases como temperatura, moneda o peso.
 - **Errores comunes**:
   - Hacer conversiones implícitas peligrosas.
-- **Ejemplo**: `ejemplo6.cpp`
+- **Ejemplo**: [ejemplo6.cpp](../ejemplos/ejemplo6.cpp)
 
 ---
 
