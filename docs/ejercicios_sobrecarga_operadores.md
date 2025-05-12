@@ -13,58 +13,55 @@ Este documento propone ejercicios para practicar la sobrecarga de operadores en 
 ### Concepto 1: Operador binario `+`
 
 1. **Aplicación directa**  
-   - Implementa una clase `Vector2D` con atributos `x, y` y sobrecarga el operador `+` para sumar dos vectores.  
-   - Prueba en `main()` sumando `(1,2)` + `(3,4)` y muestra el resultado.
+   Define una clase `Complejo` que almacene `double re, im`.  
+   2. Sobrecarga `operator+` para sumar dos números complejos.  
+   3. En `main()`, crea `Complejo a(1.0, 2.0), b(3.0, -1.0)` y muestra el resultado:  
+      ```
+      (4.0, 1.0)
+      ```
 
 2. **Completación de código**  
    ```cpp
-   // vector_suma.cpp
-   #include <iostream>
-   using namespace std;
-   
-   class Vector2D {
-   public:
-       double x, y;
-       Vector2D(double _x, double _y) : x(_x), y(_y) {}
-       
-       Vector2D operator+(const Vector2D& v) {
-           // COMPLETA: devolver la suma de *this y v
-       }
-   };
-   
-   int main() {
-       Vector2D a(0.5, 1.5), b(2.0, 3.0);
-       Vector2D c = a + b;
-       cout << "c = (" << c.x << ", " << c.y << ")" << endl;
-       return 0;
-   }
+// complejo_suma.cpp
+#include <iostream>
+using namespace std;
+
+class Complejo {
+public:
+    double re, im;
+    Complejo(double r, double i) : re(r), im(i) {}
+    Complejo operator+(const Complejo& otro) {
+        // TODO: devolver la suma de *this y otro
+    }
+};
+
+int main() {
+    Complejo x(0.5, 0.5), y(1.5, 2.0);
+    Complejo z = x + y;
+    cout << "(" << z.re << ", " << z.im << ")" << endl;
+    return 0;
+}
    ```
 
 3. **Detección y corrección de errores**  
    ```cpp
-   // vector_bug.cpp
-   #include <iostream>
-   using namespace std;
-   
-   class Vector2D {
-   public:
-       double x, y;
-       Vector2D(double _x, double _y) : x(_x), y(_y) {}
-       Vector2D operator+(Vector2D v) {   // BUG: ¿qué falta aquí?
-           Vector2D res;
-           res.x = x + v.x;
-           res.y = y + v.y;
-           return res;
-       }
-   };
-   
-   int main() {
-       Vector2D v1(1,1), v2(2,2);
-       Vector2D v3 = v1 + v2;
-       cout << "(" << v3.x << "," << v3.y << ")" << endl;
-   }
+// complejo_bug.cpp
+#include <iostream>
+using namespace std;
+
+class Complejo {
+public:
+    double re, im;
+    Complejo(double r, double i) : re(r), im(i) {}
+    // BUG: firma incorrecta y falta const
+    Complejo operator+(Complejo otro) {
+        return Complejo(re + otro.im, im + otro.re);
+    }
+};
    ```
-   - **Error a corregir**: Falta constructor por defecto y debería pasar por referencia const.
+   - Pista: revisa los componentes que se suman y la firma del método.
+
+
 
 ---
 
