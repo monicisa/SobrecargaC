@@ -17,7 +17,7 @@ Este documento propone ejercicios para practicar la sobrecarga de operadores en 
    2. Sobrecarga `operator+` para sumar dos números complejos.  
    3. En `main()`, crea `Complejo a(1.0, 2.0), b(3.0, -1.0)` y muestra el resultado:  
       ```
-      (4.0, 1.0)
+      (4.0, 1.0).
       ```
 
 2. **Completación de código**  
