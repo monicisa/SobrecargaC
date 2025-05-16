@@ -1,0 +1,2 @@
+Define una clase Empleado con string nombre; int id; y sobrecarga operator<< para imprimir "Empleado[id]: nombre".
+En main(), crea y muestra dos empleados.

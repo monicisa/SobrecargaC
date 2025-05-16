@@ -11,7 +11,7 @@ public:
 };
 
 int main() {
-    Punto p1(2, 3), p2(4, 1);
+    Punto p1(2, 3), p2(4, 2);
     Punto resultado = p1 + p2;
     cout << "Resultado: (" << resultado.x << ", " << resultado.y << ")" << endl;
 }

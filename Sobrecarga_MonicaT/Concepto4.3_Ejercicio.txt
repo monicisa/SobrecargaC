@@ -1,0 +1,2 @@
+Implementa clase Contador con atributo int c, constructor y sobrecarga operator++(int) que retorna valor previo.
+En main(), muestra resultado de c++ y luego el valor actual.

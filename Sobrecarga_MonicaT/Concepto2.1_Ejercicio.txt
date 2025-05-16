@@ -1,0 +1,2 @@
+Crea una clase Punto con int x, y y sobrecarga operator==.
+En main(), compara (5,5) con (5,5) y (5,6).

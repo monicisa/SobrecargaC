@@ -1,0 +1,2 @@
+Crea clase Buffer con char* datos y size_t n, reserva memoria en el constructor, define destructor, y sobrecarga operator= para copia profunda.
+En main(), asigna un buffer a otro y muestra contenido.

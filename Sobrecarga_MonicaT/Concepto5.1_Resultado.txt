@@ -1,0 +1,2 @@
+Contenido de b1: Hola mundo
+Contenido de b2: Hola mundo
